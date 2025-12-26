@@ -1,0 +1,17 @@
+/*  ExtraBold */
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(../fonts/Montserrat-ExtraBold.ttf) format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* Medium */
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(../fonts/Montserrat-Medium.ttf) format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}

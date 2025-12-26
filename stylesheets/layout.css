@@ -1,0 +1,84 @@
+/* Оформление */
+* {
+  font-family: "Montserrat";
+  background-color: rgba(28, 28, 28, 1);
+  color: rgba(255, 249, 243, 1);
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+body {
+  overflow-x: hidden;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Секции */
+.one {
+  border: 2px dashed yellow;
+  height: 23vw;
+}
+
+#line-1 {
+  border: 2px dashed yellow;
+  height: 10px;
+}
+
+.box {
+  width: clamp(260px, 28.5vw, 365px);
+  height: clamp(300px, 33.1vw, 424px);
+  border: 2px dashed yellow;
+}
+
+/* Cекция 1 бегущая строка */
+
+#one {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.cheza {
+  width: 100%;
+  height: 23vw;
+  overflow: hidden;
+  justify-content: center;
+  position: relative;
+}
+
+.yellow {
+  color: rgba(255, 210, 83, 1);
+}
+
+.cheza p {
+  font-size: 16vw;
+  font-weight: 700;
+  animation: runnin 10s linear infinite;
+  position: absolute;
+  white-space: nowrap;
+}
+
+@keyframes runnin {
+  0% {
+    left: 200%;
+  }
+  100% {
+    left: -200%;
+  }
+}
+
+/* секция 3 */
+.amazing {
+  width: 100%;
+  overflow: hidden;
+}
+
+.ckotch {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  overflow: hidden;
+}
