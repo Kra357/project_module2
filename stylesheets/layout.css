@@ -454,6 +454,7 @@ body {
 }
 
 .carton p {
+  margin-left: 1vw;
   font-weight: 700;
   font-size: 1.7em;
   color: rgba(28, 28, 28, 1);
