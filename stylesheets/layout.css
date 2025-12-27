@@ -335,8 +335,21 @@ body {
   border: 1px dashed yellow;
   height: 120vh;
   position: relative;
+  z-index: 0;
+  overflow: hidden;
 }
 
+.linee {
+  position: absolute;
+  border: 1px dashed rgb(255, 0, 55);
+  height: 100vh;
+  width: 67vw;
+  background-image: url(/img/linecurcle.svg);
+  background-repeat: no-repeat;
+  left: 25vw;
+  top: 20vh;
+  z-index: 4;
+}
 .boxandlox {
   border: 1px dashed rgb(255, 0, 55);
   height: 60vh;
@@ -348,4 +361,50 @@ body {
   left: 6vw;
   top: 38vh;
   transform: rotate(10deg);
+  z-index: 5;
+}
+
+.fareone {
+  position: absolute;
+  left: 42vw;
+  top: 35vh;
+  z-index: 6;
+}
+
+.faretwo {
+  position: absolute;
+  left: 70vw;
+  top: 36vh;
+  z-index: 6;
+}
+
+.farethree {
+  position: absolute;
+  left: 50vw;
+  top: 98vh;
+  z-index: 6;
+}
+
+.sckotcch {
+  position: absolute;
+  left: 20vw;
+  top: 15vh;
+  z-index: 5;
+}
+
+.tapess {
+  border: 1px dashed yellow;
+  height: 55vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.tapescolor {
+  width: 200vw;
+  border: 1px dashed rgb(255, 0, 55);
+  height: 30vh;
+  background-color: rgba(255, 249, 243, 1);
+  transform: rotate(3deg);
+  margin-left: -10vw;
+  margin-top: 9vh;
 }
