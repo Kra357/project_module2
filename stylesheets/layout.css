@@ -152,7 +152,7 @@ body {
   border: 1px dashed rgb(255, 0, 115);
   width: 70%;
   height: 78vh;
-  background-image: url(/img/box-list.png);
+  background-image: url("/img/box-list.png");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -296,7 +296,7 @@ body {
   border: 1px dashed rgb(255, 0, 55);
   width: 55vw;
   height: 105vh;
-  background-image: url(/img/box-for-lamp.png);
+  background-image: url("/img/box-for-lamp.png");
   background-repeat: no-repeat;
   background-size: contain;
 }
