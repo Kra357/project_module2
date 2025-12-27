@@ -42,10 +42,20 @@ body {
 /* Cекция 1 бегущая строка */
 
 .cheza {
-  width: 100vw;
-  font-size: 15em;
-  height: auto;
-  margin-top: 3%;
+  display: flex;
+  width: max-content;
+  white-space: nowrap;
+  font-size: clamp(4rem, 20vw, 15em);
+  animation: scroll 5s linear infinite;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .yellow {
@@ -53,6 +63,7 @@ body {
 }
 
 .cheza p {
+  margin-right: 1vw; /* расстояние между повторами */
   font-weight: 700;
 }
 
@@ -60,7 +71,7 @@ body {
 .twoo {
   position: relative;
   display: flex;
-  height: 78vh;
+  height: 76vh;
   gap: 1%;
 }
 
@@ -79,9 +90,29 @@ body {
   justify-content: center;
   font-size: 16em;
   font-weight: 700;
-  text-shadow: 0px 25px 25px #fff;
+  text-shadow: 0px 25px 25px rgba(255, 249, 243, 1);
 }
 
+@keyframes switchColors {
+  0%,
+  49% {
+    color: rgba(255, 249, 243, 1);
+    text-shadow: 0 25px 25px rgba(255, 249, 243, 1);
+  }
+  50%,
+  100% {
+    color: rgba(255, 210, 83, 1);
+    text-shadow: 0 25px 25px rgba(255, 210, 83, 1);
+  }
+}
+
+.ckotch p {
+  animation: switchColors 2s steps(1, end) infinite;
+}
+
+.ckotch p span {
+  animation: switchColors 2s steps(1, end) infinite reverse;
+}
 .v {
   width: 16%;
 }
@@ -106,22 +137,9 @@ body {
   width: 32%;
 }
 
-.box {
-  height: clamp(260px, 28.5vw, 365px);
-  width: clamp(170px, 30vw, 365px);
-}
-
-.box img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-}
-
 .box p {
   font-size: 16vw;
   font-weight: 700;
-  font-family: "Montserrat";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -131,11 +149,91 @@ body {
 .boxandtape {
   width: 70%;
   height: 78vh;
+  position: relative;
+  overflow: hidden;
   background-image: url("../img/box-list.png");
   background-repeat: no-repeat;
   background-size: contain;
+  white-space: nowrap;
 }
 
+.boxandtape .ball {
+  position: absolute;
+}
+
+/* первая картинка */
+.ball1 {
+  top: 0;
+  left: 0;
+  animation: bounce1 5s linear infinite;
+}
+
+@keyframes bounce1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(400px, 200px);
+  }
+  50% {
+    transform: translate(0, 400px);
+  }
+  75% {
+    transform: translate(300px, 100px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* вторая картинка */
+.ball2 {
+  top: 100px;
+  left: 200px;
+  animation: bounce2 6s linear infinite;
+}
+
+@keyframes bounce2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+  }
+  40% {
+    transform: translate(0px, 300px);
+  }
+  60% {
+    transform: translate(100px, 100px);
+  }
+  80% {
+    transform: translate(0, 0px);
+  }
+  100% {
+    transform: translate(50px, 0);
+  }
+}
+
+/* третья картинка */
+.ball3 {
+  top: 200px;
+  left: 100px;
+  animation: bounce3 2s linear infinite;
+}
+
+@keyframes bounce3 {
+  0% {
+    transform: translate(0, 0);
+  }
+  30% {
+    transform: translate(400px, 50px);
+  }
+  60% {
+    transform: translate(10px, 10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
 /* секция 4 */
 
 .eyes {
@@ -209,6 +307,31 @@ body {
   z-index: 1;
 }
 
+/* общий стиль для дергающихся частей */
+.color-1,
+.color-2,
+.color-3 {
+  animation: shake 0.5s ease-in-out infinite alternate;
+}
+
+/* анимация "дрожания" */
+@keyframes shake {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(2px, -1px);
+  }
+  50% {
+    transform: translate(-2px, 1px);
+  }
+  75% {
+    transform: translate(1px, -2px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
 .boxes {
   height: 101vh;
   display: flex;
