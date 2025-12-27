@@ -426,7 +426,7 @@ body {
 
 .carton {
   height: 15vh;
-  background-image: url("/img/cartoonm.svg");
+  background-image: url("../img/cartoonm.svg");
   background-repeat: no-repeat;
   background-size: contain;
   display: flex;
