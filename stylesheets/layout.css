@@ -89,7 +89,7 @@ body {
   height: 75vh;
   display: block;
   overflow: hidden;
-  background: url(/img/skotch.png) no-repeat transparent;
+  background: url("../img/skotch.png") no-repeat transparent;
   margin-left: 2%;
 }
 
@@ -407,4 +407,16 @@ body {
   transform: rotate(3deg);
   margin-left: -10vw;
   margin-top: 9vh;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.salee {
+  color: rgba(28, 28, 28, 1);
+  font-weight: 700;
+  font-size: 15em;
+  margin-left: -10vw;
+  margin-top: -4vh;
 }
