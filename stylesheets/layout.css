@@ -1,15 +1,22 @@
 /* Оформление */
 * {
-  font-family: "Montserrat";
-  background-color: rgba(28, 28, 28, 1);
   color: rgba(255, 249, 243, 1);
   box-sizing: border-box;
   margin: 0 auto;
   padding: 0 auto;
 }
+html {
+  font-family: "Montserrat";
+  font-size: 16px;
+}
 
 body {
   overflow-x: hidden;
+  background-color: rgba(28, 28, 28, 1);
+  padding: 24px;
+  background-image: url(/img/base.png);
+  background-size: 100vw;
+  background-repeat: no-repeat;
 }
 .wrapper {
   display: flex;
@@ -17,36 +24,36 @@ body {
 }
 
 /* Секции */
+
 .one {
-  border: 2px dashed yellow;
-  height: 23vw;
+  border: 1px dashed yellow;
+  height: 38vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
 }
 
-#line-1 {
-  border: 2px dashed yellow;
-  height: 10px;
+.line-1 {
+  border: 1px dashed yellow;
+  height: 4vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 
 .box {
   width: clamp(260px, 28.5vw, 365px);
   height: clamp(300px, 33.1vw, 424px);
-  border: 2px dashed yellow;
+  border: 1px dashed yellow;
 }
 
 /* Cекция 1 бегущая строка */
 
-#one {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
-
 .cheza {
-  width: 100%;
-  height: 23vw;
-  overflow: hidden;
-  justify-content: center;
-  position: relative;
+  width: 100vw;
+  font-size: 15em;
+  height: auto;
+  margin-top: 3%;
 }
 
 .yellow {
@@ -54,31 +61,291 @@ body {
 }
 
 .cheza p {
-  font-size: 16vw;
   font-weight: 700;
   animation: runnin 10s linear infinite;
-  position: absolute;
-  white-space: nowrap;
 }
 
-@keyframes runnin {
+/* @keyframes runnin {
   0% {
     left: 200%;
   }
   100% {
     left: -200%;
   }
-}
+} */
 
 /* секция 3 */
-.box {
-  width: 100%;
-  overflow: hidden;
+.twoo {
+  position: relative;
+  display: flex;
+  border: 1px dashed yellow;
+  height: 78vh;
+  gap: 1%;
 }
 
 .ckotch {
-  max-width: 100%;
-  height: auto;
+  border: 1px dashed rgb(255, 0, 115);
+  width: 30%;
+  height: 75vh;
   display: block;
   overflow: hidden;
+  background: url(/img/skotch.png) no-repeat transparent;
+  margin-left: 2%;
+}
+
+.ckotch p {
+  margin-top: 3%;
+  display: flex;
+  justify-content: center;
+  font-size: 16em;
+  font-weight: 700;
+  text-shadow: 0px 25px 25px #fff;
+}
+
+.v {
+  width: 16%;
+}
+
+.o {
+  width: 32%;
+}
+
+.s {
+  width: 16%;
+}
+
+.k {
+  width: 32%;
+}
+
+.l {
+  width: 16%;
+}
+
+.i {
+  width: 32%;
+}
+
+.box {
+  height: clamp(260px, 28.5vw, 365px);
+  width: clamp(170px, 30vw, 365px);
+}
+
+.box img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.box p {
+  font-size: 16vw;
+  font-weight: 700;
+  font-family: "Montserrat";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.boxandtape {
+  border: 1px dashed rgb(255, 0, 115);
+  width: 70%;
+  height: 78vh;
+  background-image: url(/img/box-list.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* секция 4 */
+
+.eyes {
+  border: 1px dashed yellow;
+  height: 68vh;
+  position: relative;
+}
+.color-1 {
+  position: absolute;
+  left: 17%;
+  top: 37%;
+  z-index: 2;
+}
+
+.base-1 {
+  position: absolute;
+  left: 8%;
+  top: 37%;
+  z-index: 1;
+}
+
+.color-2 {
+  position: absolute;
+  left: 45%;
+  top: 21%;
+  z-index: 2;
+}
+
+.base-2 {
+  position: absolute;
+  left: 37%;
+  top: 20%;
+  z-index: 1;
+}
+
+.base-3 {
+  position: absolute;
+  left: 65%;
+  top: 32%;
+  z-index: 2;
+}
+
+.color-3 {
+  position: absolute;
+  left: 75%;
+  top: 34%;
+  z-index: 3;
+}
+
+.triangle {
+  position: absolute;
+  left: 11%;
+  top: 72%;
+}
+
+.triangle2 {
+  position: absolute;
+  left: 34%;
+  top: 18%;
+}
+
+.triangle3 {
+  position: absolute;
+  left: 63%;
+  top: 27%;
+}
+
+.triangle4 {
+  position: absolute;
+  left: 82%;
+  top: 61%;
+  z-index: 1;
+}
+
+.boxes {
+  border: 1px dashed yellow;
+  height: 101vh;
+  display: flex;
+  justify-content: center;
+}
+
+.baseboxes {
+  border: 1px dashed rgb(255, 0, 55);
+  width: 95%;
+  height: 100%;
+  background-color: rgba(255, 249, 243, 1);
+}
+
+.tapesale {
+  border: 1px dashed yellow;
+  height: 55vh;
+  overflow: hidden;
+}
+
+.typecolor {
+  width: 200vw;
+  border: 1px dashed rgb(255, 0, 55);
+  height: 30vh;
+  background-color: rgba(255, 210, 83, 1);
+  transform: rotate(-3deg);
+  margin-left: -10vw;
+  margin-top: 9vh;
+}
+
+.typecolor {
+  font-weight: 700;
+  font-size: 15em;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.typecolor p {
+  margin-top: -5vh;
+}
+
+.typep {
+  color: rgba(28, 28, 28, 1);
+}
+
+.white {
+  color: rgba(255, 249, 243, 1);
+}
+
+.six {
+  border: 1px dashed yellow;
+  height: 120vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2%;
+  justify-content: center;
+}
+
+.boxx {
+  border: 1px dashed rgb(255, 0, 55);
+  width: 55vw;
+  height: 105vh;
+  background-image: url(/img/box-for-lamp.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.scale {
+  border: 1px dashed rgb(255, 0, 55);
+  height: 105vh;
+  width: 10vw;
+  background-image: url(/img/scale.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.categories-one {
+  border: 1px dashed rgb(255, 0, 55);
+  height: 105vh;
+  width: 25vw;
+  flex-direction: column;
+  gap: 7%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.categories-one p {
+  font-size: 5em;
+  gap: 2%;
+  margin-top: -2%;
+}
+
+.categories-one img {
+  margin-top: 12%;
+}
+
+.tag {
+  border: 1px dashed yellow;
+  height: 120vh;
+  position: relative;
+}
+
+.boxandlox {
+  border: 1px dashed rgb(255, 0, 55);
+  height: 60vh;
+  width: 25vw;
+  background-image: url(/img/lox.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  left: 6vw;
+  top: 38vh;
+  transform: rotate(10deg);
 }
