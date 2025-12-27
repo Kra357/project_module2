@@ -307,7 +307,7 @@ body {
   z-index: 1;
 }
 
-/* общий стиль для дергающихся частей */
+/* тут я объединяю*/
 .color-1,
 .color-2,
 .color-3 {
@@ -340,13 +340,58 @@ body {
 
 .baseboxes {
   width: 95%;
-  height: 100%;
+  height: 100vh;
   background-color: rgba(255, 249, 243, 1);
+  position: relative;
+  overflow: hidden;
+}
+.square:hover {
+  animation-play-state: paused; /* останавливаю движение */
+  background-color: rgba(255, 210, 83, 1);
 }
 
+.square {
+  position: absolute;
+  top: -5vh;
+  width: 20vw;
+  height: 10vw;
+  background-color: rgba(28, 28, 28, 1);
+  animation: fall 5s linear infinite;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
 .tapesale {
   height: 55vh;
   overflow: hidden;
+}
+@keyframes fall {
+  0% {
+    top: -5vh;
+  }
+  100% {
+    top: 100vh;
+  }
+}
+
+.square:nth-child(1) {
+  left: 5vw;
+  animation-delay: 0s;
+}
+.square:nth-child(2) {
+  left: 20vw;
+  animation-delay: 1s;
+}
+.square:nth-child(3) {
+  left: 40vw;
+  animation-delay: 0.5s;
+}
+.square:nth-child(4) {
+  left: 60vw;
+  animation-delay: 1.5s;
+}
+.square:nth-child(5) {
+  left: 80vw;
+  animation-delay: 2s;
 }
 
 .typecolor {
