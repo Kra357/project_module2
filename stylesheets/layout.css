@@ -14,7 +14,7 @@ body {
   overflow-x: hidden;
   background-color: rgba(28, 28, 28, 1);
   padding: 24px;
-  background-image: url(/img/base.png);
+
   background-size: 100vw;
   background-repeat: no-repeat;
 }
@@ -395,8 +395,10 @@ body {
 .tapess {
   border: 1px dashed yellow;
   height: 55vh;
-  position: relative;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .tapescolor {
@@ -408,9 +410,6 @@ body {
   margin-left: -10vw;
   margin-top: 9vh;
   white-space: nowrap;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .salee {
@@ -419,4 +418,41 @@ body {
   font-size: 15em;
   margin-left: -10vw;
   margin-top: -4vh;
+  white-space: nowrap;
+}
+
+.thought {
+  border: 1px dashed yellow;
+  height: 100vh;
+}
+
+.garage {
+  border: 1px dashed yellow;
+  height: 80vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.colorgarage {
+  position: absolute;
+  z-index: 10;
+}
+
+.cvecnemie {
+  position: absolute;
+  left: -3%;
+  z-index: 7;
+}
+
+.cat {
+  position: absolute;
+  margin-top: -23%;
+  left: 40%;
+  z-index: 8;
+}
+
+.garages {
+  position: absolute;
+  z-index: 9;
+  left: 1.5%;
 }
